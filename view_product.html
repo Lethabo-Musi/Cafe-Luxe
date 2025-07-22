@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Products</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='view_products.css') }}">
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <script>
+          alert("{{ messages[0] }}");
+        </script>
+      {% endif %}
+    {% endwith %}
+
+    <header>
+        <div class="navbar">
+            <div class="logo">Cafe Luxe</div>
+            <nav>
+                <a href="{{ url_for('view_products') }}">View Products</a>
+                <a href="{{ url_for('add_product') }}">Add Product</a>
+                <a href="{{ url_for('update_product_page') }}">Update Product</a>
+                <a href="{{ url_for('sell_product_page') }}">Sell Product</a>
+                <a href="{{ url_for('delete_product_page') }}">Delete Product</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="form-section">
+    <div class="back-box-wrapper">
+        <div class="back-box">
+            <a href="{{ url_for('home') }}">Back to Home</a>
+        </div>
+    </div>
+
+    <div class="content-center">
+    <section class="product-list">
+        <h2>All Products</h2>
+        <form method="GET" action="{{ url_for('view_products') }}" class="search-form">
+    <input type="text" name="query" placeholder="Search by product name..." value="{{ request.args.get('query', '') }}">
+    <button type="submit">Search</button>
+</form>
+        {% if products %}
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price (R)</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in products %}
+                <tr>
+                    <td>{{ product['id'] }}</td>
+                    <td>{{ product['name'] }}</td>
+                    <td>{{ product['price'] }}</td>
+                    <td>{{ product['quantity'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+            <p>No products available.</p>
+        {% endif %}
+    </section>
+    </div>
+    </div>
+    <footer class="footer">
+  <p>Copyright © Lethabo Musi</p>
+</footer>
+</body>
+</html>

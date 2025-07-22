@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fdfaf7;
+}
+
+.navbar {
+    background-color: #4e342e;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d8cfc7;
+}
+
+.navbar .logo {
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+
+.navbar nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.navbar nav a:hover {
+    color: #a1887f;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    min-height: 80vh;
+    background-color: #f7e6bc;
+    padding: 40px;
+    gap: 20px;
+}
+
+.back-box {
+    background-color: #5a3a32;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin: 30px 0 20px 40px;
+    display: inline-block;
+}
+
+.back-box a {
+    text-decoration: none;
+    color: #f9e4a4;
+    font-weight: bold;
+}
+
+.back-box a:hover {
+    color: #a1887f;
+}
+
+.back-box-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.content-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.product-list {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 40px;
+    margin-top: -60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.product-list h2 {
+    color: #4e342e;
+    margin-bottom: 20px;
+}
+
+.search-form {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-form input[type="text"] {
+    padding: 8px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-form button {
+    padding: 8px 16px;
+    background-color: #4e342e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #3e2723;
+}
+
+table {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #d8cfc7;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #e0dcd5;
+    color: #4e342e;
+}
+
+th {
+    background-color: #f1e9e2;
+}
+
+tr:nth-child(even) {
+    background-color: #fdf5ee;
+}
+
+.footer {
+    width: 100%;
+    background-color: #4e342e;
+    color: #fff;
+    text-align: center;
+    padding: 7px 0;
+    position: relative;
+    bottom: 0;
+    font-size: 14px;
+}
+

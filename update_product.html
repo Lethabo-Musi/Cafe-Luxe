@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Product</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='update.css') }}">
+</head>
+<body>
+   {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <script>
+      alert("{{ messages[0] }}");
+    </script>
+  {% endif %}
+{% endwith %}
+    <div class="navbar">
+        <div class="logo">Cafe Luxe</div>
+        <nav>
+            <a href="{{ url_for('view_products') }}">View Products</a>
+                <a href="{{ url_for('add_product') }}">Add Product</a>
+                <a href="{{ url_for('update_product_page') }}">Update Product</a>
+                <a href="{{ url_for('sell_product_page') }}">Sell Product</a>
+                <a href="{{ url_for('delete_product_page') }}">Delete Product</a>
+        </nav>
+    </div>
+
+    <div class="form-section">
+        <div class="back-box">
+                <a href="{{ url_for('home') }}">Back to Home</a>
+            </div>
+        <div class="form-container">
+            <h2>Update Product</h2>
+            <form method="post">
+                <label>Product ID:</label><br>
+                <input type="number" name="id" required><br>
+
+                <label>New Name:</label><br>
+                <input type="text" name="name" required><br>
+
+                <label>New Price:</label><br>
+                <input type="number" step="0.01" name="price" required><br>
+
+                <label>New Quantity:</label><br>
+                <input type="number" name="quantity" required><br><br>
+
+                <input type="submit" value="Update Product" class="button">
+            </form>
+        </div>
+    </div>
+ <footer class="footer">
+  <p>Copyright © Lethabo Musi</p>
+</footer>
+</body>
+</html>

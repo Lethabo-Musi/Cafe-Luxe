@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar {
+    background-color: #4e342e;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d8cfc7;
+}
+
+.navbar .logo {
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+
+.navbar nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.navbar nav a:hover {
+    color: #a1887f;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    min-height: 80vh;
+    background-color: #f7e6bc;
+    padding: 40px;
+    gap: 20px;
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 0px auto 0 auto; 
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border: 1px solid #d8cfc7;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.form-container h2 {
+    color: #4e342e;
+    margin-bottom: 20px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #d8cfc7;
+    border-radius: 5px;
+    background-color: #f7f5f2;
+    font-size: 16px;
+}
+
+.button {
+    background-color: #5a3a32;
+    color: #f9e4a4;
+    padding: 20px 60px;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #42271d;
+}
+
+.back-box {
+    background-color: #5a3a32;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin: 30px 0 20px 40px; 
+    display: inline-block;
+}
+
+.back-box a {
+    text-decoration: none;
+    color: #f9e4a4;
+    font-weight: bold;
+}
+
+.back-box a:hover {
+    color: #a1887f;
+}
+
+.footer {
+    width: 100%;
+    background-color: #4e342e;
+    color: #fff;
+    text-align: center;
+    padding: 7px 0;
+    position: relative;
+    bottom: 0;
+    font-size: 14px;
+}

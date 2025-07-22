@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Product</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='delete.css') }}">
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+  <script>
+    {% for msg in messages %}
+      alert("{{ msg }}");
+    {% endfor %}
+  </script>
+ {% endwith %}
+    <div class="navbar">
+        <div class="logo">Cafe Luxe</div>
+        <nav>
+            <a href="{{ url_for('view_products') }}">View Products</a>
+                <a href="{{ url_for('add_product') }}">Add Product</a>
+                <a href="{{ url_for('update_product_page') }}">Update Product</a>
+                <a href="{{ url_for('sell_product_page') }}">Sell Product</a>
+                <a href="{{ url_for('delete_product_page') }}">Delete Product</a>
+        </nav>
+    </div>
+
+    <div class="form-section">
+                    <div class="back-box">
+                <a href="{{ url_for('home') }}">Back to Home</a>
+            </div>
+        <div class="form-container">
+            <h2>Delete Product</h2>
+
+            {% if error %}
+                <p style="color: red;">{{ error }}</p>
+            {% elif success %}
+                <p style="color: green;">{{ success }}</p>
+            {% endif %}
+
+            <form method="post">
+                <label>Product ID:</label><br>
+                <input type="number" name="id" required><br><br>
+                <input type="submit" value="Delete Product" class="button">
+            </form>
+        </div>
+    </div>
+    <footer class="footer">
+  <p>Copyright © Lethabo Musi</p>
+</footer>
+</body>
+</html>
+
